@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Karma | Evinizin Yanında</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="headerInside">
+            <section class="d-block d-lg-none searchArea">
+                <div id="dT_top-sticky">
+                    <a href="#" class="dT_TopStickySearchCloseBtn close">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 100 100" xml:space="preserve">
+                            <path d="M57,50l35.2-35.2c1.9-1.9,1.9-5.1,0-7c-1.9-1.9-5.1-1.9-7,0L50,43L14.8,7.7c-1.9-1.9-5.1-1.9-7,0c-1.9,1.9-1.9,5.1,0,7
+            L43,50L7.7,85.2c-1.9,1.9-1.9,5.1,0,7c1,1,2.2,1.5,3.5,1.5s2.5-0.5,3.5-1.5L50,57l35.2,35.2c1,1,2.2,1.5,3.5,1.5s2.5-0.5,3.5-1.5
+            c1.9-1.9,1.9-5.1,0-7L57,50z"></path>
+                        </svg>
+                    </a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="dT_ProductProactiveSearch">
+                                <form method="GET" action="#" autocomplete="off">
+                                    <div class="search-box">
+                                        <input type="text" name="q" autocomplete="off" placeholder="Ne aramıştınız..."
+                                            aria-label="Ne aramıştınız..." class="form-control" /> <input type="hidden"
+                                            name="product" value="product" />
+                                        <div class="input-group-append">
+                                            <button type="submit" class="dt-sc-btn">
+                                                <img src="images/search-normal.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dT_PredictiveSearchResult_Section" style="display: none;">
+                                    <ul class="dt-sc-ProductSugesstions"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="h-top">
+                <div class="container">
+                    <div class="h-topInside">
+                        <ul class="socialMedia">
+                            <li><a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                            <li><a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a> </li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a> </li>
+                        </ul>
+                        <div class="h-top-right">
+                            <ul>
+                                <li><a href="">Yardım</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-midle">
+                <div class="container">
+
+                    <div class="h-midle-inside">
+                        <div class="menuSide d-block d-lg-none">
+                            <div class="bar-user">
+                                <a data-toggle="modal" data-target="#menuModal">
+                                    <img src="images/menu.svg">
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="logoSide">
+                            <a href=""><img src="/images/logo.png" alt="Logo"></a>
+                        </div>
+                        <div class="searchSide d-none d-lg-block">
+                            <form action="#" method="get">
+                                <div class="input-box">
+                                    <input type="text" name="k" class="form-control" placeholder="Ne Aramıştınız..." />
+                                    <button type="submit" class="btnSearch">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="rightSideHeader">
+                            <div class="searchBasket d-block d-lg-none">
+                                <div class="bar-user">
+
+                                    <div class="iconSearch">
+                                        <img src="images/search-normal.svg">
+
+
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="loginBasket">
+                                <div class="bar-user">
+                                    <a data-toggle="modal" data-target="#loginModal">
+                                        <img src="images/user.svg">
+                                        <div class="link">
+                                            Giriş Yap
+                                            <span>Veya Üye Ol</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bagBasket">
+                                <div class="bar-user">
+                                    <a data-toggle="modal" data-target="#bagModal">
+                                        <img src="images/bag.svg">
+                                        <div class="link">
+                                            Sepet
+                                            <span>0,00 TL</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="h-bottom">
+                <div class="container">
+                    <div class="h-bottomInside">
+                        <div class="menu-container">
+                            <div class="menu">
+                                <ul class="clearfix">
+                                    <li><a href="#">Beyaz Eşsya</a></li>
+                                    <li><a href="#">Televizyon & Ses Sistemi</a>
+                                        <ul>
+                                            <li><a href="#">Markaya Göre</a>
+                                                <ul>
+                                                    <li><a href="#">Arçelik</a></li>
+                                                    <li><a href="#">Beko</a></li>
+                                                    <li><a href="#">Grundig</a></li>
+                                                    <li><a href="#">Vestel</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Boyuta Göre</a>
+                                                <ul>
+                                                    <li><a href="#">50"</a></li>
+                                                    <li><a href="#">55"</a></li>
+                                                    <li><a href="#">60"</a></li>
+                                                    <li><a href="#">65"</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Ses Sistemi</a>
+                                                <ul>
+                                                    <li><a href="#">Taşınabilir</a></li>
+                                                    <li><a href="#">Sinema Ses Sistemi</a></li>
+                                                    <li><a href="#">Hoparlör</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li><img src="https://via.placeholder.com/400"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Kişisel Bakım</a>
+                                        <ul>
+                                            <li><a href="#">Saç Düzleştirici</a></li>
+                                            <li><a href="#">Saç Kurutma Makinesi</a></li>
+                                            <li><a href="#">Tıraş Makinesi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mutfak Gereçleri</a>
+                                        <ul>
+                                            <li><a href="#">Takımlar</a>
+                                                <ul>
+                                                    <li><a href="#">Pasta Takımları</a></li>
+                                                    <li><a href="#">Kahvaltı Takımları</a></li>
+                                                    <li><a href="#">Hazırlık Gereçleri</a></li>
+                                                    <li><a href="#">Yemek Takımları</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Kaplar</a>
+                                                <ul>
+                                                    <li><a href="#">Saklama Kabı</a></li>
+                                                    <li><a href="#">Kek Kalıbı</a></li>
+                                                    <li><a href="#">Cam Matara</a></li>
+                                                    <li><a href="#">Çekmece Düzenleyici</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Küçük Ev Aletleri</a>
+                                                <ul>
+                                                    <li><a href="#">Kahve Makinesi</a></li>
+                                                    <li><a href="#">Çay Makinesi</a></li>
+                                                    <li><a href="#">Blender</a></li>
+                                                    <li><a href="#">Tost Makinesi</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li><img src="https://via.placeholder.com/400"></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="breadcrumbCS">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Buzdolabı</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <section class="mainArea">
+            <div class="container">
+                <span class="textTitle">
+                    <strong>Beyaz Eşya</strong>kategorisi içeriğindeki ürünler listeleniyor.
+                </span>
+                <div class="filterProduct">
+                    <div class="leftSide d-none d-lg-block">
+                        <select id="filterForDate">
+                            <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                            <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                            <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                            <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                        </select>
+                        <select id="filterForAll">
+                            <option label="Tüm Ürünler">Tüm Ürünler</option>
+                            <option label="Tüm Ürünler">Tüm Ürünler</option>
+                            <option label="Tüm Ürünler">Tüm Ürünler</option>
+                            <option label="Tüm Ürünler">Tüm Ürünler</option>
+                        </select>
+                    </div>
+                    <div class="leftSideM d-block d-lg-none">
+                        <a data-toggle="modal" data-target="#filterModal">
+                            Filtrele
+                        </a>
+                    </div>
+                    <div class="rightSide">
+                        <div class="gridShowcase">
+                            <div class="active"><i class="fa fa-th-large"></i></i></div>
+                            <div><i class="fa fa-th"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showRoom" id="productList">
+
+                </div>
+                <section class="pageNumbers">
+                    <ul>
+                        <li> <a class="active" href="">1 </a></li>
+                        <li> <a href="">2 </a></li>
+                        <li> <a href="">3 </a></li>
+                        <li> <a href="">4 </a></li>
+                        <li> <a href="">5 </a></li>
+                    </ul>
+                    </secti>
+                </section>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footerInner">
+                <div class="menu order-2 order-md-1">
+                    <ul>
+                        <div class="menuTitle">Kurumsal </div>
+                        <li><a href="">Hakkımızda</a></li>
+                        <li><a href="">Kampanyalar</a></li>
+                        <li><a href="">Banka Hesap Numaraları</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Haberler</a></li>
+
+                    </ul>
+                </div>
+                <div class="menu  order-3 order-md-2">
+                    <ul>
+                        <div class="menuTitle">Müşteri Hizmetleri </div>
+                        <li><a href="">Sipariş Sorgulama</a></li>
+                        <li><a href="">Teslimat ve Kargo</a></li>
+                        <li><a href="">İade ve Değişim</a></li>
+                        <li><a href="">Üyelik Sözleşmesi</a></li>
+                        <li><a href="">Gizlilik ve Güvenlik</a></li>
+
+
+
+                    </ul>
+                </div>
+                <div class="menu  order-4 order-md-3">
+                    <ul>
+                        <div class="menuTitle">Yardım </div>
+                        <li><a href="">İletişim Bilgileri</a></li>
+                        <li><a href="">Sıkça Sorulan Sorular</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="menu order-4 order-md-4">
+                    <ul>
+                        <div class="menuTitle">İletişim </div>
+                        <li>
+                            <strong>Adres: </strong>1376 Sok. No: 1/43 Boran Plaza, Halkapinar,
+                            Konak/Izmir
+                        </li>
+                        <li>
+                            <a href="tel:08505555555"><strong>Telefon: </strong>0 850 555 55 55</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="menu order-1 order-md-5">
+                    <ul>
+                        <div class="menuTitle">Bizi Takip Edin</div>
+                        <ul class="socialFooter">
+
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+
+                        <div class="newsletterContainer ">
+                            <div class="menuSubTitle">E-Bültene abone olun, gelişmeleri kaçırmayın</div>
+                            <div class="newsletter">
+                                <input name="mail" placeholder="E-Posta Adresiniz" type="text">
+                                <button class="sendNewsletter">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="copyright">
+
+                <div class="text"> Copyright &copy; 2020 - Karma Kırmızı</div>
+                <div class="logo">
+                    <img src="/images/akilli.svg" alt="Kiwi standing on oval">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal right fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+
+                <div class="modal-body ModalBodyLogin">
+
+                    <h3>HOŞ GELDİNİZ</h3>
+                    <h5>Hızlı ve güvenli alışverişe giriş yapın!</h5>
+
+                    <div class="modalForm">
+                        <form class="login-form" action="" method="post" onSubmit="return userLogin(this)">
+                            <input type="hidden" name="returnUrl" value="{{ returnUrl() }}" />
+                            <label>E-Posta Adresiniz</label>
+                            <input type="text" class="form-control m-input " name="email" value="">
+                            <div class="mt-3"></div>
+                            <label>Şifre</label>
+                            <input type="password" class="form-control m-input " name="password" value="">
+                            <div class="mt-3"></div>
+                            <button class="btn btn-success mb-2" type="submit">Giriş Yap</button>
+
+                            <span class="forgetPass">
+                                <a href="#" class="btn btn-ageLine mb-3 mt-3">
+                                    Şifremi Unuttum
+                                </a>
+                            </span>
+
+
+
+
+
+
+                        </form>
+
+                        <span class="veyaAge">Üye Değil Misin?</span>
+
+                        <button id="showRegister" class="btn btn-bordered mb-2" type="submit">Üye Ol</button>
+                    </div>
+
+                </div>
+                <div class="modal-body ModalBodyRegister" style="display:none;">
+
+                    <h3>ARAMIZA SEN DE KATIL!</h3>
+                    <h5>Kampanyalardan faydalanmak ve sana özel kampanyalardan haberdar olmak için hemen üye ol!</h5>
+
+                    <div class="modalForm">
+                        <form class="register-form" action="" method="post">
+                            <div class="mws-form-inline">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label>Ad <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control m-input small" name="name" value="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Soyad <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control m-input small" name="lastname" value="">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label>E-Posta Adresiniz <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control m-input small" name="email" value="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Telefon Numarası</label>
+                                        <input type="text" class="form-control form-phone-control m-input small"
+                                            name="phone" value="">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label>Şifre <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control m-input small" name="password"
+                                            value="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Şifre (tekrar) <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control m-input small" name="password2"
+                                            value="">
+                                    </div>
+                                </div>
+
+
+                                <div class="tikRegister">
+                                    <label> </label>
+                                    <input type="checkbox" style="margin-right: 10px">
+                                    <label for="checkMailEnewsletter" class="ml-2">
+                                        E-Posta bültenine kayıt olmayı onaylıyorum.
+                                    </label>
+                                </div>
+
+
+                                <div class="tikRegister">
+                                    <label> </label>
+                                    <input type="checkbox" style="margin-right: 10px">
+                                    <label for="checkSmsEnewsletter" class="ml-2">
+                                        Kampanyaların Sms ve E-Mail olarak gönderilmesini onaylıyorum.
+                                    </label>
+                                </div>
+
+                                <div class="tikRegister">
+                                    <label> </label>
+                                    <input type="checkbox">
+                                    <label for="checkUserRule" class="ml-2">
+                                        Üyelik Sözleşmesini okudum onaylıyorum.
+                                    </label>
+                                </div>
+
+
+                                <div class="mt-3"></div>
+                                <button class="btn btn-success">Kayıt Ol</button>
+                            </div>
+                        </form>
+
+                        <span class="veyaAge">Zaten Üye Misin?</span>
+
+                        <button id="showLogin" class="btn btn-bordered mb-2" type="submit">Giriş Yap</button>
+                    </div>
+
+                </div>
+
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div>
+    <div class="modal right fade" id="bagModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+
+                <div class="modal-body ModalBodyLogin">
+
+                    Sepetin boş
+                </div>
+
+            </div>
+
+
+        </div><!-- modal-content -->
+    </div>
+    <div class="modal right fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+
+                <div class="modal-body ModalBodyFilter">
+
+                    <select id="filterForDate">
+                        <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                        <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                        <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                        <option label="En Son Eklenenlere Göre">En Son Eklenenlere Göre</option>
+                    </select>
+                    <select id="filterForAll">
+                        <option label="Tüm Ürünler">Tüm Ürünler</option>
+                        <option label="Tüm Ürünler">Tüm Ürünler</option>
+                        <option label="Tüm Ürünler">Tüm Ürünler</option>
+                        <option label="Tüm Ürünler">Tüm Ürünler</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+        </div><!-- modal-content -->
+    </div>
+    <div class="modal left fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+
+                <div class="modal-body ModalBodyLogin">
+
+
+                    <div class="tabs-container">
+                        <div class="tabs">
+                            <input type="radio" name="tabs" id="tab-1" checked="checked">
+                            <label for="tab-1">Menü</label>
+
+                            <input type="radio" name="tabs" id="tab-2">
+                            <label for="tab-2">İletişim</label>
+
+                            <input type="radio" name="tabs" id="tab-3">
+                            <label for="tab-3">Bilgilendirme Sayfaları</label>
+                            <div class="tab">
+                                <div class="menuSide1">
+
+                                    <nav class="sidebar-menu">
+                                        <div class="scrollbar">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li><a href="javascript:;" class="btn-categories-show"
+                                                            data-id="1"><span class="name float-left">Ana
+                                                                Kategori</span><span class="icon float-right"><i
+                                                                    class="fas fa-angle-right"></i></span>
+                                                            <div class="clearfix"></div>
+                                                        </a>
+                                                        <ul class="multi categories-list-1">
+                                                            <li><a><span class="name float-left">
+                                                                        Alt Kategori 1</span>
+                                                                    <div class="clearfix"></div>
+                                                                </a></li>
+                                                            <li class="sc-48"><a href="javascript:;"
+                                                                    class="btn-categories-show" data-id="48"><span
+                                                                        class="name float-left">Alt Kategori
+                                                                        2</span><span class="icon float-right"><i
+                                                                            class="fas fa-angle-right"></i></span>
+                                                                    <div class="clearfix"></div>
+                                                                </a>
+                                                                <ul class="multi categories-list-48">
+                                                                    <li class="sc-48-all"><a href=""><span
+                                                                                class="name float-left">
+                                                                                2.Seviye Alt Kategori 1</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-33"><a href="i"><span class="name ">
+                                                                                2.Seviye Alt Kategori
+                                                                                2</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-34"><a href=""><span class="name ">
+                                                                                2.Seviye Alt Kategori
+                                                                                3i</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-49"><a href=""><span class="name ">
+                                                                                2.Seviye Alt Kategori
+                                                                                4</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-52"><a href=""><span class="name ">
+                                                                                2.Seviye Alt Kategori
+                                                                                5</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sc-38"><a href="javascript:;"
+                                                                    class="btn-categories-show" data-id="38"><span
+                                                                        class="name float-left">Alt Kategori
+                                                                        3</span><span class="icon float-right"><i
+                                                                            class="fas fa-angle-right"></i></span>
+                                                                    <div class="clearfix"></div>
+                                                                </a>
+                                                                <ul class="multi categories-list-38">
+                                                                    <li class="sc-38-all"><a href=""><span
+                                                                                class="name float-left">
+                                                                                2. Seviye Alt Kategori</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-35"><a href=""><span class="name "> 2.
+                                                                                Seviye Alt
+                                                                                Kategori</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-36"><a href=""><span class="name "> 2.
+                                                                                Seviye Alt
+                                                                                Kategori</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                    <li class="sc-50"><a href=""><span class="name ">2.
+                                                                                Seviye Alt
+                                                                                Kategori</span>
+                                                                            <div class="clearfix"></div>
+                                                                        </a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sc-30"><a href=""><span class="name ">Ana Kategori
+                                                                2</span>
+                                                            <div class="clearfix"></div>
+                                                        </a></li>
+                                                    <li class="sc-31"><a href=""><span class="name ">Ana Kategori
+                                                                3</span>
+                                                            <div class="clearfix"></div>
+                                                        </a></li>
+                                                    <li class="sc-32"><a href=""><span class="name ">Ana Kategori
+                                                                4</span>
+                                                            <div class="clearfix"></div>
+                                                        </a></li>
+                                                    <li class="sc-37"><a href=""><span class="name ">Ana Kategori
+                                                                5</span>
+                                                            <div class="clearfix"></div>
+                                                        </a></li>
+                                                    <li class=""><a class="kutunuYap" href="">
+                                                            Kampanyalar
+                                                        </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <ul class="adresTab">
+                                    <div class="menuTitle">İletişim </div>
+                                    <li>
+                                        <strong>Adres: </strong>1376 Sok. No: 1/43 Boran Plaza, Halkapinar,
+                                        Konak/Izmir
+                                    </li>
+                                    <li>
+                                        <a href="tel:08505555555"><strong>Telefon: </strong>0 850 555 55 55</a>
+                                    </li>
+                                    <li>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.440996826239!2d27.167104615881733!3d38.43128157964533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd879bffaa4e7%3A0x648e19a003186007!2sBoran%20Plaza!5e0!3m2!1str!2str!4v1642266557269!5m2!1str!2str"
+                                            width="100%" height="300" style="border:0;" allowfullscreen=""
+                                            loading="lazy"></iframe>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab">
+                                <div class="menu">
+                                    <ul>
+                                        <div class="menuTitle">Kurumsal </div>
+                                        <li><a href="">Hakkımızda</a></li>
+                                        <li><a href="">Kampanyalar</a></li>
+                                        <li><a href="">Banka Hesap Numaraları</a></li>
+                                        <li><a href="">Blog</a></li>
+                                        <li><a href="">Haberler</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <ul>
+                                        <div class="menuTitle">Müşteri Hizmetleri </div>
+                                        <li><a href="">Sipariş Sorgulama</a></li>
+                                        <li><a href="">Teslimat ve Kargo</a></li>
+                                        <li><a href="">İade ve Değişim</a></li>
+                                        <li><a href="">Üyelik Sözleşmesi</a></li>
+                                        <li><a href="">Gizlilik ve Güvenlik</a></li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <ul>
+                                        <div class="menuTitle">Yardım </div>
+                                        <li><a href="">İletişim Bilgileri</a></li>
+                                        <li><a href="">Sıkça Sorulan Sorular</a></li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="menu">
+                                    <ul>
+                                        <div class="menuTitle">Bizi Takip Edin</div>
+                                        <ul class="socialFooter">
+
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+
+                                        <div class="newsletterContainer ">
+                                            <div class="menuSubTitle">E-Bültene abone olun, gelişmeleri kaçırmayın</div>
+                                            <div class="newsletter">
+                                                <input name="mail" placeholder="E-Posta Adresiniz" type="text">
+                                                <button class="sendNewsletter">
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div><!-- modal-content -->
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</html>

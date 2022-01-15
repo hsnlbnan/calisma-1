@@ -112,13 +112,6 @@ $(".btn-categories-show").click(function () {
   $(".sidebar-menu .categories .categories-list-" + id).slideToggle("fast");
 });
 
-$(".header-cart-hover").hover(
-  function () {
-    showCartBox();
-  },
-  function () {}
-);
-
 $(document).ready(function () {
   "use strict";
   $(".menu > ul > li:has( > ul)").addClass("menu-dropdown-icon");

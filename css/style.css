@@ -2042,6 +2042,11 @@ ul.adresTab li {
     position: relative;
     bottom: unset;
   }
+
+  #loginModal .modal-dialog {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

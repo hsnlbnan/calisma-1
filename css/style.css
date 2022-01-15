@@ -705,7 +705,7 @@ nav ul {
 /*Header Side*/
 header {
   position: relative;
-  background: #fff;
+  background: #ffffff;
   z-index: 120;
   height: 21.7vh;
 }
@@ -713,10 +713,10 @@ header .headerInside {
   position: fixed;
   top: 0;
   width: 100%;
-  bottom: #fff;
+  bottom: #ffffff;
 }
 header .headerInside .h-midle {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 header .h-top {
   background-color: #f9f9f9;
@@ -752,7 +752,7 @@ header .h-top .h-topInside .h-top-right ul a {
 header .h-top .h-topInside .h-top-right ul li:nth-child(2) a {
   background-color: red;
   padding: 1rem;
-  color: #fff;
+  color: #ffffff;
 }
 header .h-midle .h-midle-inside {
   display: flex;
@@ -820,7 +820,7 @@ header .h-midle .h-midle-inside .searchSide form .input-box .btnSearch {
   background-color: red;
   width: 50px;
   height: 35px;
-  color: #fff;
+  color: #ffffff;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -853,7 +853,7 @@ header .h-bottom .h-bottomInside nav ul li:firstx -child a {
   padding-left: 0;
 }
 header .h-bottom .h-bottomInside nav ul li a {
-  color: #fff;
+  color: #ffffff;
   padding: 1rem;
   font-weight: 700;
 }
@@ -924,7 +924,7 @@ main .mainArea .filterProduct .leftSideM a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
 }
@@ -1007,7 +1007,7 @@ main .mainArea .showRoom .showcase {
 main .mainArea .showRoom .showcase:hover .showcaseHover {
   bottom: 0;
   width: 100%;
-  background: #fff;
+  background: #ffffff;
 }
 main .mainArea .showRoom .showcase .imageWrapper {
   width: 100;
@@ -1058,7 +1058,7 @@ main .mainArea .pageNumbers ul li a {
 }
 main .mainArea .pageNumbers ul li .active {
   background: red;
-  color: #fff;
+  color: #ffffff;
 }
 
 footer {
@@ -1094,7 +1094,7 @@ footer .footerInner .menu ul .newsletter button {
   height: 100%;
   background: red;
   width: 50px;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.6rem;
 }
 footer .footerInner .menu ul li {
@@ -1220,7 +1220,7 @@ main .mainArea .textTitle strong {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #ffffff;
   background-clip: padding-box;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 100px;
@@ -1230,6 +1230,14 @@ main .mainArea .textTitle strong {
 .modalForm {
   margin-top: 3rem;
   padding: 0.3rem;
+}
+.modalForm * {
+  font-size: 1.1rem;
+}
+.modalForm .m-input {
+  height: 50px;
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .modalForm .btn-success {
@@ -1279,10 +1287,14 @@ main .mainArea .textTitle strong {
 }
 
 .btn-bordered {
-  border: 1px solid;
+  border: 1px solid #ebebeb !important;
   width: 100%;
   border-radius: 80px;
   margin-top: 2rem;
+}
+
+.btn {
+  font-size: 1.4rem !important;
 }
 
 .modal-body h5 {
@@ -1468,7 +1480,7 @@ a.dT_TopStickySearchCloseBtn.close svg {
   display: none;
   position: absolute;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  background: #fff;
+  background: #ffffff;
   height: 620px;
   z-index: 99999;
   width: 70%;
@@ -1522,7 +1534,7 @@ button svg:only-child {
 
 .dt-sc-btn:hover {
   background-color: #e4cda7;
-  color: #fff;
+  color: #ffffff;
   border: 1px solid #e4cda7;
   padding: 0 !important;
   border: none !important;
@@ -1530,13 +1542,13 @@ button svg:only-child {
 }
 
 .dt-sc-btn:hover svg {
-  color: #fff;
-  fill: #fff;
+  color: #ffffff;
+  fill: #ffffff;
 }
 
 /* Sidebar Menu */
 .sidebar-menu {
-  background: #fff;
+  background: #ffffff;
   width: 250px;
   top: 0;
   height: calc(100vh);
@@ -1561,14 +1573,14 @@ button svg:only-child {
 .sidebar-menu .title {
   padding: 10px;
   background: #333;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
 }
 
 .sidebar-menu .title .btn-close {
-  color: #fff;
+  color: #ffffff;
 }
 
 .sidebar-menu .title-alt {
@@ -1656,7 +1668,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) {
   animation: gradient 2s ease infinite;
 }
 nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -1704,7 +1716,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
   padding: 1.5em 3em;
   display: block;
   font-size: 13px;
-  color: #fff;
+  color: #ffffff;
 }
 .h-bottomInside .menu > ul > li:hover {
   background: #b00000;
@@ -1808,7 +1820,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #ffffff;
   height: 50px;
   position: relative;
 }
@@ -1821,7 +1833,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
   border-radius: 50%;
 }
 .showcaseHover .actionBTNs a:hover i {
-  color: #fff;
+  color: #ffffff;
   z-index: 12;
 }
 .showcaseHover .actionBTNs a:after {
@@ -1879,7 +1891,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
   padding: 1.6rem;
   font-size: 14px;
   font-weight: 500;
-  color: #fff !important;
+  color: #ffffff !important;
   display: grid;
   grid-template-columns: 0.8fr 0.2fr;
   align-items: center;
@@ -1888,7 +1900,7 @@ nav.sidebar-menu > div > div > ul > li:nth-child(6) a {
 }
 .showcaseHover .inspectProductBTN:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid red;
   color: #333 !important;
 }
@@ -1924,7 +1936,7 @@ section .tabs-container {
   padding: 2rem 0;
   border-top-width: 2px;
   border-top-style: solid;
-  border-color: #000000;
+  border-color: #000;
 }
 
 .tabs input:first-of-type:checked + label ~ .tab:first-of-type,
@@ -1964,7 +1976,7 @@ section .tabs-container {
   height: 100%;
   background: red;
   width: 50px;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.6rem;
 }
 .tabs-container .tabs .tab .menu ul.socialFooter {
@@ -2023,6 +2035,13 @@ ul.adresTab li {
   border: 1px solid #e2e2e2;
   padding: 1rem;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .showcaseHover {
+    position: relative;
+    bottom: unset;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

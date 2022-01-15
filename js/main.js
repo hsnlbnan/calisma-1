@@ -1,40 +1,36 @@
-var url = "https://api.akilliticaretim.com/api/Product/ListProducts/0";
-
-var xhr = new XMLHttpRequest();
-xhr.open("GET", url);
-
-xhr.setRequestHeader("accept", "application/json");
-xhr.setRequestHeader(
-  "Authorization",
-  "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmYjdjNjJmNi1lMDE0LTRiMGMtOTUyMC00OGVmMDhkNzcyOWUiLCJ1c2VyaWQiOiIxMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZ3VpZCI6IkEzQTctQ0QzQS1GRUI2LTE1QTMiLCJleHAiOjE2NDIyNzUwMzQsImlzcyI6Imh0dHBzOi8vd3d3LmFraWxsaXRpY2FyZXQuY29tLyIsImF1ZCI6Imh0dHBzOi8vd3d3LmFraWxsaXRpY2FyZXQuY29tLyJ9.Dgjl_DOMNQCREqi1a-uH_3MTO8hS_BYr_dSGFK9RpCM"
-);
-xhr.setRequestHeader("GUID", "A3A7-CD3A-FEB6-15A3");
-
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    console.log(xhr.data);
-    console.log(JSON.parse(xhr.responseText));
-    var data = JSON.parse(xhr.responseText);
-
-    for (var i = 0; i < data.data.length; i++) {
-      var value = parseInt(data.data[i].price, 10) / 3;
-      var fixedValue = value.toFixed(2);
-      var newValue = parseInt(data.data[i].price, 10).toFixed(2);
-
-      var row = $(
-        "<div class='showcase'><div class='imageWrapper'><img src='https://via.placeholder.com/900x900' alt='Ürün Resmi'> </div><div class='productDetails' id='productDetails'><h4 class='title'>" +
-          data.data[i].name +
-          "</h4><h5 class='price'>" +
-          newValue +
-          "TL </h5><span class='taksit'><strong>Taksitli Fiyatı:</strong> 3x " +
-          fixedValue +
-          " TL</span> </div><div class='showcaseHover'><div class='inputCount'><div class='inputContainer'><input class='form-control' type='text' value='1'></div><div class='minusPlusContainer'><div><i class='fa-solid fa-plus'></i></div><div><i class='fa-solid fa-minus'></i></div></div></div><div class='actionBTNs'><a class='hover-butons' title='Sepete Ekle'><i class='fa-solid fa-bag-shopping'></i></a><a class='hover-butons' title='Favorilere Ekle'><i class='fa-regular fa-heart'></i></a><a title='Karşılaştır' class='hover-butons'><i class='fa-solid fa-code-compare'></i>	</a></div>    <a href='#' class='inspectProductBTN'>Ürünü İncele<i class='fa-solid fa-angle-right'></i>		</a>    </div></div>"
-      );
-      $("#productList").append(row);
-    }
-  }
+var settings = {
+  url: "https://api.akilliticaretim.com/api/Product/ListProducts/0",
+  method: "GET",
+  timeout: 0,
+  headers: {
+    authorization:
+      "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmYjdjNjJmNi1lMDE0LTRiMGMtOTUyMC00OGVmMDhkNzcyOWUiLCJ1c2VyaWQiOiIxMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZ3VpZCI6IkEzQTctQ0QzQS1GRUI2LTE1QTMiLCJleHAiOjE2NDIyNzUwMzQsImlzcyI6Imh0dHBzOi8vd3d3LmFraWxsaXRpY2FyZXQuY29tLyIsImF1ZCI6Imh0dHBzOi8vd3d3LmFraWxsaXRpY2FyZXQuY29tLyJ9.Dgjl_DOMNQCREqi1a-uH_3MTO8hS_BYr_dSGFK9RpCM",
+    GUID: "A3A7-CD3A-FEB6-15A3",
+    accept: "application/json",
+  },
 };
-xhr.send();
+
+$.ajax(settings).done(function (response) {
+  console.log(response.data);
+  var data = response.data;
+
+  for (var i = 0; i < data.length; i++) {
+    var value = parseInt(data[i].price, 10) / 3;
+    var fixedValue = value.toFixed(2);
+    var newValue = parseInt(data[i].price, 10).toFixed(2);
+
+    var row = $(
+      "<div class='showcase'><div class='imageWrapper'><img src='https://via.placeholder.com/900x900' alt='Ürün Resmi'> </div><div class='productDetails' id='productDetails'><h4 class='title'>" +
+        data[i].name +
+        "</h4><h5 class='price'>" +
+        newValue +
+        "TL </h5><span class='taksit'><strong>Taksitli Fiyatı:</strong> 3x " +
+        fixedValue +
+        " TL</span> </div><div class='showcaseHover'><div class='inputCount'><div class='inputContainer'><input class='form-control qtyValue' type='text' value='1'></div><div class='minusPlusContainer'><div><i class='increaseQty fa-solid fa-plus'></i></div><div><i class='decreaseQty fa-solid fa-minus'></i></div></div></div><div class='actionBTNs'><a class='hover-butons' title='Sepete Ekle'><i class='fa-solid fa-bag-shopping'></i></a><a class='hover-butons' title='Favorilere Ekle'><i class='fa-regular fa-heart'></i></a><a title='Karşılaştır' class='hover-butons'><i class='fa-solid fa-code-compare'></i>	</a></div>    <a href='#' class='inspectProductBTN'>Ürünü İncele<i class='fa-solid fa-angle-right'></i>		</a>    </div></div>"
+    );
+    $("#productList").append(row);
+  }
+});
 
 var on = false;
 var headerScroll = function () {
@@ -142,4 +138,34 @@ $(document).ready(function () {
 $(window).resize(function () {
   $(".menu > ul > li").children("ul").hide();
   $(".menu > ul").removeClass("show-on-mobile");
+});
+
+$(document).ready(function () {
+  var minVal = 1,
+    maxVal = 20;
+  $(".increaseQty").on("click", function () {
+    var $parentElm = $(this).parents(".qtySelector");
+    $(this).addClass("clicked");
+    setTimeout(function () {
+      $(".clicked").removeClass("clicked");
+    }, 100);
+    var value = $parentElm.find(".qtyValue").val();
+    if (value < maxVal) {
+      value++;
+    }
+    $parentElm.find(".qtyValue").val(value);
+  });
+
+  $(".decreaseQty").on("click", function () {
+    var $parentElm = $(this).parents(".qtySelector");
+    $(this).addClass("clicked");
+    setTimeout(function () {
+      $(".clicked").removeClass("clicked");
+    }, 100);
+    var value = $parentElm.find(".qtyValue").val();
+    if (value > 1) {
+      value--;
+    }
+    $parentElm.find(".qtyValue").val(value);
+  });
 });

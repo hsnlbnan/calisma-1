@@ -998,7 +998,7 @@ main .mainArea .showRoom {
   grid-gap: 1rem;
 }
 main .mainArea .showRoom .showcase {
-  border: 1px solid #333;
+  border: 1px solid #ebebeb;
   padding: 0.5rem;
   position: relative;
   overflow: hidden;
